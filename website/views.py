@@ -1,8 +1,8 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 # Defines the blueprint of the urls
 views = Blueprint('views', __name__)
 
 
-@views.route('/')
-def home():
-    return "<h1>Test</h1>"
+@views.route('/calculator')
+def calculator():
+    return render_template("calculator.html")
