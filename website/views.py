@@ -3,6 +3,6 @@ from flask import Blueprint, render_template
 views = Blueprint('views', __name__)
 
 
-@views.route('/calculator')
+@views.route('/')
 def calculator():
     return render_template("calculator.html")
