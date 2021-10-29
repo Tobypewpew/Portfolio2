@@ -2,26 +2,56 @@
 {% block title %}Calculator{% endblock %}
 {% block content %}
 <form method="POST">
+
   <h3 align="center">Byte Calculator</h3>
   <label for="info">add a table then create some fields including names and datatype </label>
   <div class="container">
-    <div class="row align-items-start">
-      <div class="col">
-        <input
-        type="text"
-        class="form-control"
-        id="Table"
-        name="Table"
-        placeholder="Table Name"
-        />
+    <div class="row" style="padding: 2px">
+      <div class="col-3"  align="right" style="line-height: 38px" >Input Table Name:</div>
+      <div class="col-3" >
+        <input type="text" class="form-control" id="Table" name="Table" placeholder="Table Name"/>
       </div>
-  </div>
-  <div class="form group">
+    </div>
+
+    <div class="row" style="padding: 2px">
+      <div class="col-3" align="right" style="line-height: 38px"  >Records Expected:</div>
+      <div class="col-3" >
+        <input type="text" class="form-control" id="Records" name="Records" placeholder="Records"/>
+      </div>
+    </div>
+    <div class="row" style="padding: 2px">
+      <div class="col-3" style="line-height: 38px"  >Field Name</div>
+      <div class="col-3" style="line-height: 38px"  >Datatype</div>
+      <div class="col-3" style="line-height: 38px"  >Minimum Bytes</div>
+      <div class="col-3" style="line-height: 38px"  >Maximum Bytes</div>
+    </div>
+    <div class="row" style="padding: 2px">
+      <div class="col-3" >
+        <input type="text" class="form-control" id="Field Name" name="Field Name" placeholder="Field Name"/>
+      </div>
+      <div class="col-3" >
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">char(n)</a></li>
+            <li><a class="dropdown-item" href="#">varchar(n)</a></li>
+            <li><a class="dropdown-item" href="#">varchar(max)</a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="col-3" >100</div>
+        <div class="col-3" >1000</div>
+    </div>
 
   </div>
 
-  </div>
-  <button type="button" class="btn btn-primary" onclick="AddFormGroup()">Add Table</button>
+
+  <button type="button" class="btn btn-primary col-1" onclick="AddColumn()" style="padding: 2px">Add Field</button>
+  <button type="button" class="btn btn-primary col-1" onclick="AddFormGroup()" style="padding: 2px">Add Table</button>
+
+
 </form>
 <script>
 function AddFormGroup() {
