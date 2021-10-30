@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Calculator{% endblock %}
 {% block content %}
-<form method="POST">
+<h3 align="center">Byte Calculator</h3>
+<label for="info">add a table then create some fields including names and datatype </label>
+<div id="wrapper" >
+<form id = "tableCollection" method="POST" hidden="true" style="padding-top: 30px" >
 
-  <h3 align="center">Byte Calculator</h3>
-  <label for="info">add a table then create some fields including names and datatype </label>
-  <div class="container">
+  <div class="container" >
     <div class="row" style="padding: 2px">
       <div class="col-3"  align="right" style="line-height: 38px" >Input Table Name:</div>
       <div class="col-3" >
@@ -25,38 +26,41 @@
       <div class="col-3" style="line-height: 38px"  >Minimum Bytes</div>
       <div class="col-3" style="line-height: 38px"  >Maximum Bytes</div>
     </div>
-    <div class="row" style="padding: 2px">
-      <div class="col-3" >
-        <input type="text" class="form-control" id="Field Name" name="Field Name" placeholder="Field Name"/>
-      </div>
-      <div class="col-3" >
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">char(n)</a></li>
-            <li><a class="dropdown-item" href="#">varchar(n)</a></li>
-            <li><a class="dropdown-item" href="#">varchar(max)</a></li>
-          </ul>
+    <div id="fields">
+      <div class="row" id = "field" style="padding: 2px">
+        <div class="col-3" >
+          <input type="text" class="form-control" id="Field Name" name="Field Name" placeholder="Field Name"/>
         </div>
+        <div class="col-3" >
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">char(n)</a></li>
+              <li><a class="dropdown-item" href="#">varchar(n)</a></li>
+              <li><a class="dropdown-item" href="#">varchar(max)</a></li>
+            </ul>
+          </div>
+        </div>
+          <div class="col-3" >100</div>
+          <div class="col-3" >1000</div>
       </div>
-        <div class="col-3" >100</div>
-        <div class="col-3" >1000</div>
     </div>
 
+
+  <div class="row" style="padding: 2px">
+  <button type="button" class="btn btn-primary col-1" id="addfield" style="padding: 2px">Add Field</button>
+  </div>
+  </div>
+</form>
+</div>
+  <div class="row justify-content-md-center" style="padding: 2px">
+  <button type="button" id="addtable" class="btn btn-primary col-1" style="padding: 2px">Add Table</button>
   </div>
 
 
-  <button type="button" class="btn btn-primary col-1" onclick="AddColumn()" style="padding: 2px">Add Field</button>
-  <button type="button" class="btn btn-primary col-1" onclick="AddFormGroup()" style="padding: 2px">Add Table</button>
-
-
-</form>
 <script>
-function AddFormGroup() {
-  var btn = document.createElement("BUTTON");
-  document.body.appendChild(btn);
-}
+
 </script>
 {% endblock %}
