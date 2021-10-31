@@ -28,7 +28,6 @@
         </div>
     </nav>
 
-    <div class="container">{% block content %} {% endblock %}</div>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -50,6 +49,7 @@
       type="text/javascript"
       src="{{ url_for('static', filename='index.js') }}"
     ></script>
+    <div class="container">{% block content %} {% endblock %}</div>
 
 </body>
 </html>
