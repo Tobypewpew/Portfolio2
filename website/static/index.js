@@ -1,8 +1,8 @@
 $(function()
 {
     $("#addtable").click(function () {
-        var index = 0;
-        $('#tableCollection').clone().attr({'id': 'tableCollection' + index, hidden: false}).appendTo('#wrapper');
+        var index = 1;
+        $('#tableCollection0').clone().attr({'id': 'tableCollection' + index}).appendTo('#wrapper');
         index++;
     });
     $("#addfield").click(function () {
