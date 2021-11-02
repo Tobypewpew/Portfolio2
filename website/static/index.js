@@ -8,6 +8,8 @@ $(function()
 
 });
 
+
+
 $(function()
 { var T = 1;
     $("#addtable").click(function () {
@@ -43,10 +45,10 @@ $(function()
         '          </div>\n' +
         '          <div class="col-3" >\n' +
         '            <div class="dropdown">\n' +
-        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">\n' +
+        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-expanded="false">\n' +
         '                Dropdown button\n' +
         '              </button>\n' +
-        '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">\n' +
+        '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n' +
         '                <li><a class="dropdown-item" href="#">char(n)</a></li>\n' +
         '                <li><a class="dropdown-item" href="#">varchar(n)</a></li>\n' +
         '                <li><a class="dropdown-item" href="#">varchar(max)</a></li>\n' +
@@ -75,6 +77,11 @@ $(function()
     document.getElementById('wrapper').appendChild(div);
     T++;
     });
+});
+$(function() {
+    function DropDown() {
+        document.getElementsByClassName("btn btn-secondary dropdown-toggle").classList.toggle("show");
+    }
 });
 
 
