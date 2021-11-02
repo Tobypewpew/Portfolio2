@@ -32,6 +32,7 @@ $(function()
         '          <input type="text" class="form-control" id="Records" name="Records" placeholder="Records"/>\n' +
         '        </div>\n' +
         '      </div>\n' +
+        '      <div class="row" style="padding: 10px"></div>\n' +
         '      <div class="row" style="padding: 2px">\n' +
         '        <div class="col-2" style="line-height: 38px"  >Field Name</div>\n' +
         '        <div class="col-2" style="line-height: 38px"  >Datatype</div>\n' +
@@ -56,6 +57,9 @@ $(function()
         '              </ul>\n' +
         '            </div>\n' +
         '          </div>\n' +
+        '          <div class="col-2" >\n' +
+        '          <input type="text" class="form-control" name="n-value" placeholder="n/a"/>\n' +
+        '        </div>\n' +
         '          <div class="col-2" >100</div>\n' +
         '          <div class="col-2" >1000</div>\n' +
         '        </div>\n' +
@@ -73,7 +77,8 @@ $(function()
         '      <div class="row" style="padding: 2px">\n' +
         '        <button type="button" class="btn btn-primary col-1" id="addfield" style="padding: 2px">Add Field</button>\n' +
         '      </div>\n' +
-        '    </div>';
+        '    </div>' +
+        '<hr/>';
 
     document.getElementById('wrapper').appendChild(div);
     T++;
