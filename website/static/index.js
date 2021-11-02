@@ -56,7 +56,15 @@ $(function()
         '          <div class="col-3" >100</div>\n' +
         '          <div class="col-3" >1000</div>\n' +
         '        </div>\n' +
+
         '      </div>\n' +
+        '      <div class="row" style="padding: 2px">\n' +
+        '        <div class="col-3" style="line-height: 38px"  ></div>\n' +
+        '        <div class="col-3" style="line-height: 38px" align="right"  >Total Bytes:</div>\n' +
+        '        <div class="col-3" style="line-height: 38px"  >100</div>\n' +
+        '        <div class="col-3" style="line-height: 38px"  >1000</div>\n' +
+        '      </div>\n' +
+
         '\n' +
         '\n' +
         '      <div class="row" style="padding: 2px">\n' +
