@@ -1,5 +1,3 @@
-    $("#addtable").click(function () {
-        var index = 1;
-        $('#tableCollection0').clone().attr({'id': 'tableCollection' + index}).appendTo('#wrapper');
-        index++;
-    });
+
+
+
