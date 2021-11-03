@@ -1,3 +1,11 @@
+$(function()
+{
+    $("#addfield").click(function () {
+        var index = 0;
+        $('#field').clone().attr({'id': 'field' + index}).appendTo('#fields');
+        index++;
+    });
 
+});
 
 
