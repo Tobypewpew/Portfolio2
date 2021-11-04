@@ -7,5 +7,16 @@ $(function()
     });
 
 });
+    var T = $(this).value
+    $('#field').clone().attr({'id': 'field' + index}).appendTo('#fields'+T);
+    index++;
+    var T = $(this).value;
+
+
+$(document).on('click', '.addfield', function () {
+    var T = $(this).val();
+    $('#field').clone().attr({'id': 'field'}).appendTo('#fields'+T);
+});
+
 
 

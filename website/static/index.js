@@ -1,8 +1,30 @@
-
 $(document).on('click', '.addfield', function () {
-    var index = 0;
-    $('#field').clone().attr({'id': 'field' + index}).appendTo('#fields');
-    index++;
+    var T = $(this).val();
+    var div = document.createElement('div');
+    div.setAttribute('class', 'row');
+    div.setAttribute('style','padding: 2px');
+    div.innerHTML =
+        '          <div class="col-2" >\n' +
+        '            <input type="text" class="form-control" id="Field Name" name="Field Name" placeholder="Field Name"/>\n' +
+        '          </div>\n' +
+        '          <div class="col-2" >\n' +
+        '            <div class="dropdown">\n' +
+        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-expanded="false">\n' +
+        '                Dropdown button\n' +
+        '              </button>\n' +
+        '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>char(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(max)</a></li>\n' +
+        '              </ul>\n' +
+        '            </div>\n' +
+        '          </div>\n' +
+        '          <div class="col-2" >\n' +
+        '            <input type="text" class="form-control" name="n-value" placeholder="n/a"/>\n' +
+        '          </div>\n' +
+        '          <div class="col-2" >100</div>\n' +
+        '          <div class="col-2" >1000</div>\n';
+    document.getElementById('fields'+T).appendChild(div);
 });
 
 
@@ -36,29 +58,7 @@ $(function()
         '        <div class="col-2" style="line-height: 38px"  >Minimum Bytes</div>\n' +
         '        <div class="col-2" style="line-height: 38px"  >Maximum Bytes</div>\n' +
         '      </div>\n' +
-        '      <div id="fields" value = "fields"' +T+ '>\n' +
-        '        <div class="row" id = "field" style="padding: 2px">\n' +
-        '          <div class="col-2" >\n' +
-        '            <input type="text" class="form-control" id="Field Name" name="Field Name" placeholder="Field Name"/>\n' +
-        '          </div>\n' +
-        '          <div class="col-2" >\n' +
-        '            <div class="dropdown">\n' +
-        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-expanded="false">\n' +
-        '                Dropdown button\n' +
-        '              </button>\n' +
-        '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>char(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(max)</a></li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '          <div class="col-2" >\n' +
-        '            <input type="text" class="form-control" name="n-value" placeholder="n/a"/>\n' +
-        '          </div>\n' +
-        '          <div class="col-2" >100</div>\n' +
-        '          <div class="col-2" >1000</div>\n' +
-        '        </div>\n' +
+        '      <div id="fields'+T+'">\n' +
         '      </div>\n' +
         '      <div class="row" style="padding: 2px">\n' +
         '        <div class="col-2" style="line-height: 38px"  ></div>\n' +
@@ -70,7 +70,7 @@ $(function()
         '\n' +
         '\n' +
         '      <div class="row" style="padding: 2px">\n' +
-        '        <button type="button" class="btn btn-primary col-1 addfield" id="addfield"' +T+ ' style="padding: 2px">Add Field</button>\n' +
+        '        <button type="button" class="btn btn-primary col-1 addfield" id="addfield"' +T+ ' value='+T+' style="padding: 2px">Add Field</button>\n' +
         '      </div>\n' +
         '    </div>' +
         '<hr/>';
