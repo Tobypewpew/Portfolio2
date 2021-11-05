@@ -12,9 +12,9 @@ $(document).on('click', '.addfield', function () {
         '                Dropdown button\n' +
         '              </button>\n' +
         '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n' +
-        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "char(n)" >char(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(max)</a></li>\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]} data-value = "char(n)" >char(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(max)</a></li>\n' +
         '              </ul>\n' +
         '            </div>\n' +
         '          </div>\n' +
@@ -67,8 +67,8 @@ $(function()
         '        <div class="textonly col-2"  ></div>\n' +
         '        <div class="textonly col-2"  ></div>\n' +
         '        <div class="textonly col-2" align="right"  >Total Bytes:</div>\n' +
-        '        <div class="textonly col-2" value="0" ></div>\n' +
-        '        <div class="textonly col-2" value="0" ></div>\n' +
+        '        <div class="textonly col-2" value=0 >0</div>\n' +
+        '        <div class="textonly col-2" value=0 >0</div>\n' +
         '      </div>\n' +
         '\n' +
         '\n' +
