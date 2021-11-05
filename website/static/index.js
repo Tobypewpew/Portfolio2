@@ -9,13 +9,13 @@ $(document).on('click', '.addfield', function () {
         '          </div>\n' +
         '          <div class="col-2" >\n' +
         '            <div class="dropdown">\n' +
-        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-expanded="false">\n' +
+        '              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
         '                Dropdown button\n' +
         '              </button>\n' +
         '              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>char(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(n)</a></li>\n' +
-        '                <li><a class="dropdown-item" value={"min-max":["0","1"]}>varchar(max)</a></li>\n' +
+        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "char(n)" >char(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(n)</a></li>\n' +
+        '                <li><a class="dropdown-item" href="#" value={"min-max":["0","1"]} data-value = "varchar(n)" >varchar(max)</a></li>\n' +
         '              </ul>\n' +
         '            </div>\n' +
         '          </div>\n' +
@@ -25,6 +25,12 @@ $(document).on('click', '.addfield', function () {
         '          <div class="col-2" >100</div>\n' +
         '          <div class="col-2" >1000</div>\n';
     document.getElementById('fields'+T).appendChild(div);
+
+});
+
+$(document).on('click', '.dropdown-menu li a', function () {
+    $(this).parents(".dropdown").find('.btn').html($(this).text());
+    $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
 });
 
 
