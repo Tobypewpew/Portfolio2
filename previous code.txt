@@ -18,4 +18,13 @@ $(document).on('click', '.addfield', function () {
     $('#field').clone().attr({'id': 'field'}).appendTo('#fields'+T);
 });
 
+    param.parents(".row").find('.MinBytes').text($(this).val());
+    param.parents(".row").find('.MaxBytes').text($(this).val());
 
+        $( ".variable" ).on('input',function() {
+        updated($(this));
+    });
+    function updated(param) {
+    var variable = $(this).val()
+    alert(param.parents(".row").find('.MinBytes').text(variable));
+}
