@@ -63,15 +63,19 @@ $(document).on('click', '.dropdown-menu li a', function () {
     $(this).parents(".row").find('.variable').attr('min',minvar[sel]);
     $(this).parents(".row").find('.variable').attr('max',maxvar[sel]);
     //validate input
-    $(".variable").keyup(function () {
+
+    const fun = ($(".variable").keyup(function () {
         var currentvalue = $(this).val()
-        if (currentvalue<minvar[sel])
-            {$(this).val(minvar[sel]);}
-        else if (currentvalue>maxvar[sel])
-            {$(this).val(maxvar[sel]);}
-    });
+        console.log(1);
+        if (currentvalue < minvar[sel]) {
+            $(this).val(minvar[sel]);
+        } else if (currentvalue > maxvar[sel]) {
+            $(this).val(maxvar[sel]);
+        }
+    }));
 
 });
+
 
 
 $(function()
